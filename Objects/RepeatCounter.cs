@@ -10,7 +10,7 @@ namespace FindWord.Objects
 
     public int CountRepeats(string mainString, string searchWord)
     {
-      if (mainString == searchWord)
+      if (mainString.Contains(searchWord))
       {
         return 1;
       }

@@ -9,16 +9,28 @@ namespace FindWord
   public class RepeatCounterTest
   {
     [Fact]
-    public void SearchWordDifferentThanString_CountRepeats_0()
+    public void StringDifferentFromSearchWord_CountRepeats_0()
     {
       RepeatCounter counter = new RepeatCounter();
       Assert.Equal(0, counter.CountRepeats("goodbye", "hello"));
     }
     [Fact]
-    public void SearchWordSameAsString_CountRepeats_1()
+    public void StringSameAsSearchWord_CountRepeats_1()
     {
       RepeatCounter counter = new RepeatCounter();
       Assert.Equal(1, counter.CountRepeats("hello", "hello"));
+    }
+    [Fact]
+    public void StringDoesntContainSearchWord_CountRepeats_0()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      Assert.Equal(0, counter.CountRepeats("monkey", "donkey"));
+    }
+    [Fact]
+    public void StringContainsSearchWord_CountRepeats_1()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      Assert.Equal(1, counter.CountRepeats("monkey", "monk"));
     }
   }
 }
