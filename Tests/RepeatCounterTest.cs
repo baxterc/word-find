@@ -14,5 +14,11 @@ namespace FindWord
       RepeatCounter counter = new RepeatCounter();
       Assert.Equal(0, counter.CountRepeats("goodbye", "hello"));
     }
+    [Fact]
+    public void SearchWordSameAsString_CountRepeats_1()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      Assert.Equal(1, counter.CountRepeats("hello", "hello"));
+    }
   }
 }
