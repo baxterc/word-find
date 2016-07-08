@@ -25,6 +25,14 @@ Output Example:
 Input Example: "honk-honk", "honk"
 Output Example: 2
 
--Assuming the user wants an inclusive search, return the number of times the main  string contains both exact matches of their search word other words which contain (but are not exactly the same as) their search word.
+-Assuming the user wants an inclusive search, return the number of times the main string contains both exact matches of their search word other words which contain (but are not exactly the same as) their search word.
 Input Example: "loopy loop bloopers", "loop"
 Output Example: 3
+
+-Check if the user wants a case-sensitive search; if they do, match an the string with the search word if they are exactly the same.  This does not require a .ToLower() method to be applied to the two strings.
+Input Example:
+Output Example:
+
+-If the user does not want a case-sensitive search, match the string with the search word if they are the same when turned into all lower case.
+Input Example:
+Output Example:

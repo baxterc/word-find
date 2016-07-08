@@ -14,7 +14,7 @@ namespace FindWord
       };
       Post["/count"] = _ => {
         RepeatCounter counter = new RepeatCounter();
-        int count = counter.CountRepeats(Request.Form["full-string"], Request.Form["find-word"], Request.Form["inclusive"]);
+        int count = counter.CountRepeats(Request.Form["full-string"], Request.Form["find-word"], Request.Form["inclusive"], Request.Form["case-sensitive"]);
         return View["count.cshtml", count];
       };
     }
