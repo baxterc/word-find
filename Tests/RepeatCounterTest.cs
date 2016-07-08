@@ -44,5 +44,11 @@ namespace FindWord
       RepeatCounter counter = new RepeatCounter();
       Assert.Equal(1, counter.CountRepeats("hello world", "hello"));
     }
+    [Fact]
+    public void MultiWordStringContainsSearchWordTwice_CountRepeats_2()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      Assert.Equal(2, counter.CountRepeats("beep beep", "beep"));
+    }
   }
 }
