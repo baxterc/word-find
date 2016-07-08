@@ -50,5 +50,17 @@ namespace FindWord
       RepeatCounter counter = new RepeatCounter();
       Assert.Equal(2, counter.CountRepeats("beep beep", "beep"));
     }
+    [Fact]
+    public void MultiWordStringSeparatedByHyphen_CountRepeats_2()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      Assert.Equal(2, counter.CountRepeats("honk-honk", "honk"));
+    }
+    [Fact]
+    public void ThreeWordsIncludeSearchWord_CountRepeats_3()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      Assert.Equal(3, counter.CountRepeats("loopy loop bloopers", "loop"));
+    }
   }
 }

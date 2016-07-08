@@ -22,9 +22,9 @@ Input Example:
 Output Example:
 
 -Find words separated by characters other than spaces such as hyphens, commas, periods, etc.
-Input Example:
-Output Example:
-
--Assuming the user wants an inclusive search, return 2 if the main string contains one exact match of their search word and another word which contains (but is not exactly the same as) their search word.
-Input Example: "monkey monk", "monk"
+Input Example: "honk-honk", "honk"
 Output Example: 2
+
+-Assuming the user wants an inclusive search, return the number of times the main  string contains both exact matches of their search word other words which contain (but are not exactly the same as) their search word.
+Input Example: "loopy loop bloopers", "loop"
+Output Example: 3
