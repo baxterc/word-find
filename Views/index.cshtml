@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Word Finder!</h1>
+
+    <form action="/count" method="post">
+      <label for="find-word">Find this word...</label>
+      <input type="text" name="find-word" id="find-word" value="">
+
+      <label for="full-string">...in this text.</label>
+      <input type="text" name="full-string" id="full-string" value="">
+
+      <input type="checkbox" name="inclusive" value=true> Check this box to find your word within other words.
+
+      <button type="submit" name="button">Submit</button>
+    </form>
+
+  </body>
+</html>
