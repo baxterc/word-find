@@ -95,5 +95,11 @@ namespace FindWord
       int htmlTest = counter.CountRepeats("beep beep beep", "beep", false, false);
       Assert.Equal("Your word was found 3 times!", counter.HTMLOutput(htmlTest));
     }
+    [Fact]
+    public void SearchWordHasSpace_CountRepeats_3()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      Assert.Equal(3, counter.CountRepeats("Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo", "Buffalo buffalo", false, false));
+    }
   }
 }

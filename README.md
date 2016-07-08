@@ -36,3 +36,7 @@ Output Example:
 -If the user does not want a case-sensitive search, match the string with the search word if they are the same when turned into all lower case.
 Input Example:
 Output Example:
+
+-If the user enters a search term that contains a space, return a count of exact matches only.
+Input Example: "Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo", "Buffalo buffalo"
+Output Example: 3
