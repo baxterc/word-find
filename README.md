@@ -21,6 +21,10 @@ Output Example:
 Input Example:
 Output Example:
 
--Return 2 if the string is two instances of the word with no other characters between those instances.
+-Find words separated by characters other than spaces such as hyphens, commas, periods, etc.
 Input Example:
 Output Example:
+
+-Assuming the user wants an inclusive search, return 2 if the main string contains one exact match of their search word and another word which contains (but is not exactly the same as) their search word.
+Input Example: "monkey monk", "monk"
+Output Example: 2
