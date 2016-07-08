@@ -10,14 +10,20 @@ namespace FindWord.Objects
 
     public int CountRepeats(string mainString, string searchWord)
     {
-      if (mainString.Contains(searchWord))
+      int wordCount = 0;
+      string[] stringWords = mainString.Split(' ');
+      foreach (string w in stringWords)
       {
-        return 1;
+        if (w.Contains(searchWord))
+        {
+          wordCount ++;
+        }
+        else
+        {
+          continue;
+        }
       }
-      else
-      {
-        return 0;
-      }
+      return wordCount;
     }
   }
 }
