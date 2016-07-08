@@ -74,5 +74,26 @@ namespace FindWord
       RepeatCounter counter = new RepeatCounter();
       Assert.Equal(1, counter.CountRepeats("test", "Test", false, false));
     }
+    [Fact]
+    public void NoWordMatch_HTMLOutput_NoMatchesFound()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      int htmlTest = counter.CountRepeats("goodbye", "hello", false, false);
+      Assert.Equal("Sorry, your word wasn't found in the text.", counter.HTMLOutput(htmlTest));
+    }
+    [Fact]
+    public void OneWordMatch_HTMLOutput_OneMatchFound()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      int htmlTest = counter.CountRepeats("goodbye", "goodbye", false, false);
+      Assert.Equal("Your word was found 1 time!", counter.HTMLOutput(htmlTest));
+    }
+    [Fact]
+    public void ThreeWordMatches_HTMLOutput_ThreeMatchesFound()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      int htmlTest = counter.CountRepeats("beep beep beep", "beep", false, false);
+      Assert.Equal("Your word was found 3 times!", counter.HTMLOutput(htmlTest));
+    }
   }
 }
