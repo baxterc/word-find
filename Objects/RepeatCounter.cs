@@ -9,7 +9,7 @@ namespace FindWord.Objects
     public int CountRepeats(string mainString, string searchWord)
     {
       int wordCount = 0;
-      string[] stringWords = mainString.Split(' ', ',', '.', '-', '_', '!', '.', '?', ':', ';', '/', );
+      string[] stringWords = mainString.Split(' ', ',', '.', '-', '_', '!', '.', '?', ':', ';', '/');
       foreach (string w in stringWords)
       {
         if (w == searchWord)
