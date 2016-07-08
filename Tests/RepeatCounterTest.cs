@@ -32,5 +32,17 @@ namespace FindWord
       RepeatCounter counter = new RepeatCounter();
       Assert.Equal(1, counter.CountRepeats("monkey", "monk"));
     }
+    [Fact]
+    public void TwoWordStringDoesntContainSearchWord_CountRepeats_0()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      Assert.Equal(0, counter.CountRepeats("hello world", "goodbye"));
+    }
+    [Fact]
+    public void TwoWordStringContainsSearchWord_CountRepeats_1()
+    {
+      RepeatCounter counter = new RepeatCounter();
+      Assert.Equal(1, counter.CountRepeats("hello world", "hello"));
+    }
   }
 }
