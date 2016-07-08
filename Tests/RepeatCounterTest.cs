@@ -12,55 +12,55 @@ namespace FindWord
     public void StringDifferentFromSearchWord_CountRepeats_0()
     {
       RepeatCounter counter = new RepeatCounter();
-      Assert.Equal(0, counter.CountRepeats("goodbye", "hello"));
+      Assert.Equal(0, counter.CountRepeats("goodbye", "hello", false));
     }
     [Fact]
     public void StringSameAsSearchWord_CountRepeats_1()
     {
       RepeatCounter counter = new RepeatCounter();
-      Assert.Equal(1, counter.CountRepeats("hello", "hello"));
+      Assert.Equal(1, counter.CountRepeats("hello", "hello", false));
     }
     [Fact]
     public void StringDoesntContainSearchWord_CountRepeats_0()
     {
       RepeatCounter counter = new RepeatCounter();
-      Assert.Equal(0, counter.CountRepeats("monkey", "donkey"));
+      Assert.Equal(0, counter.CountRepeats("monkey", "donkey", true));
     }
     [Fact]
     public void StringContainsSearchWord_CountRepeats_1()
     {
       RepeatCounter counter = new RepeatCounter();
-      Assert.Equal(1, counter.CountRepeats("monkey", "monk"));
+      Assert.Equal(1, counter.CountRepeats("monkey", "monk", true));
     }
     [Fact]
     public void TwoWordStringDoesntContainSearchWord_CountRepeats_0()
     {
       RepeatCounter counter = new RepeatCounter();
-      Assert.Equal(0, counter.CountRepeats("hello world", "goodbye"));
+      Assert.Equal(0, counter.CountRepeats("hello world", "goodbye", false));
     }
     [Fact]
     public void TwoWordStringContainsSearchWord_CountRepeats_1()
     {
       RepeatCounter counter = new RepeatCounter();
-      Assert.Equal(1, counter.CountRepeats("hello world", "hello"));
+      Assert.Equal(1, counter.CountRepeats("hello world", "hello", false));
     }
     [Fact]
     public void MultiWordStringContainsSearchWordTwice_CountRepeats_2()
     {
       RepeatCounter counter = new RepeatCounter();
-      Assert.Equal(2, counter.CountRepeats("beep beep", "beep"));
+      Assert.Equal(2, counter.CountRepeats("beep beep", "beep", false));
     }
     [Fact]
     public void MultiWordStringSeparatedByHyphen_CountRepeats_2()
     {
       RepeatCounter counter = new RepeatCounter();
-      Assert.Equal(2, counter.CountRepeats("honk-honk", "honk"));
+      Assert.Equal(2, counter.CountRepeats("honk-honk", "honk", false));
     }
     [Fact]
     public void ThreeWordsIncludeSearchWord_CountRepeats_3()
     {
       RepeatCounter counter = new RepeatCounter();
-      Assert.Equal(3, counter.CountRepeats("loopy loop bloopers", "loop"));
+      Assert.Equal(3, counter.CountRepeats("loopy loop bloopers", "loop", true));
     }
   }
 }

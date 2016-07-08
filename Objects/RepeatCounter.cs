@@ -6,7 +6,7 @@ namespace FindWord.Objects
 {
   public class RepeatCounter
   {
-    public int CountRepeats(string mainString, string searchWord)
+    public int CountRepeats(string mainString, string searchWord, bool isInclusive)
     {
       int wordCount = 0;
       string[] stringWords = mainString.Split(' ', ',', '.', '-', '_', '!', '.', '?', ':', ';', '/');
@@ -16,7 +16,7 @@ namespace FindWord.Objects
         {
           wordCount ++;
         }
-        else if (w.Contains(searchWord))
+        else if (isInclusive == true && w.Contains(searchWord))
         {
           wordCount ++;
         }
