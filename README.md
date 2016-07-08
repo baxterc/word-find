@@ -2,8 +2,8 @@
 Specifications:
 
 -Return 0 if the word is not the same as the string.
-Input Example:
-Output Example:
+Input Example: "hello", "goodbye"
+Output Example: 0
 
 -Return 1 if the word is the same as the string.
 Input Example:
