@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="../Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Content/css/styles.css">
     <meta charset="utf-8">
-    <title></title>
+    <title>Word Finder!</title>
   </head>
   <body>
-
-    <h1>Word Finder!</h1>
-
-    <form action="/count" method="post">
-      <label for="find-word">Find this word...</label>
-      <input type="text" name="find-word" id="find-word" value="">
-
-      <label for="full-string">...in this text.</label>
-      <input type="text" name="full-string" id="full-string" value="">
-
-      <input type="checkbox" name="case-sensitive" value=true> Check this box to make your search case-sensitive.
-      <input type="checkbox" name="inclusive" value=true> Check this box to find your word within other words.
-
-
-      <button type="submit" name="button">Submit</button>
-    </form>
-
+    <div class="container">
+      <h1>Word Finder!</h1>
+      <form action="/count" method="post">
+        <div class="form-group">
+          <label for="find-word">Find this word...</label>
+          <input type="text" name="find-word" id="find-word" value="">
+          <label for="full-string">...in this text:</label>
+          <textarea name="full-string" id="full-string" value=""></textarea>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="case-sensitive" value=true> Check this box to make your search case-sensitive.
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="inclusive" value=true> Check this box to find your word within other words.
+        </div>
+        <button type="submit" name="button">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
