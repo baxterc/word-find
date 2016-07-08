@@ -13,7 +13,7 @@ namespace FindWord.Objects
       {
         int mainLength = mainString.Length;
         string searchedString = mainString.Replace(searchWord,"");
-        wordCount = (mainLength-searchedString.Length) / searchWord.Length;
+        wordCount = (mainLength-searchedString.Length) / searchWord.Length; // This checks if there's a string in the search word, then removes the search word from the main string every time it occurs.  The difference in the length of the original main string and the new string with the search words removed is then divided by the length of the search word, which is equal to the number of times the removal of the search word occurred, which in turn is equal to the number of matches that occurred.
       }
       else
       {
@@ -28,7 +28,7 @@ namespace FindWord.Objects
           {
             wordCount ++;
           }
-          else if (isInclusive == true && w.ToLower().Contains(searchWord.ToLower()) && w.ToLower() != searchWord.ToLower()) // this prevents an exact match from being considered an inclusive match in cases where the user wants a case-sensitive match but not an inclusive match.
+          else if (isInclusive == true && w.ToLower().Contains(searchWord.ToLower()) && w.ToLower() != searchWord.ToLower()) // the second condition prevents an exact match from being considered an inclusive match.  Otherwise, this clause would find matches that would be precluded by the case sensitive search, such as "This" and "this."  Exact, non-case-sensitive matches are handled in the first conditional statement.
           {
             wordCount ++;
           }
